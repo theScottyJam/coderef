@@ -6,7 +6,7 @@ It's a simple, yet powerful concept. Just run `npx coderef` to copy a unique tag
 
 <br/>
 
-### Example
+## Example
 
 someScript.js
 ```js
@@ -30,14 +30,12 @@ Assuming your team is all on the same page, anyone team member updating these co
 
 Now that you've seen this concept, you won't be able to unsee it. We're creating abstractions left and right to make code more DRY, and a good handful of them can simply be replaced with a couple of code tags.
 
-Happy Coding!
+**Happy Coding!**
 
 <br/>
 <br/>
 
 ---
-
-<br/>
 
 ## API
 
