@@ -21,6 +21,7 @@
   "bin": {
     "coderef": "./cli.js"
   },
+  "main": "main.js",
   "files": [
     "cli.js"
   ],
