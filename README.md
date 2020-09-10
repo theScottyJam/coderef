@@ -34,8 +34,15 @@ Happy Coding!
 
 <br/>
 <br/>
+
+---
+
 <br/>
 
 ## API
 
 If for some reason you choose to install and import this package, you will find it exposes a single `generate` function, which, when called, returns a randomly generated tag.
+
+## License
+
+This project is under the [MIT](https://opensource.org/licenses/MIT) license.
