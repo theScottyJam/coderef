@@ -1,0 +1,30 @@
+{
+  "name": "coderef",
+  "version": "1.0.0",
+  "description": "Link distant parts of your codebase together. Keep your source code in sync.",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "keywords": [
+    "crossref",
+    "link",
+    "reference",
+    "sync",
+    "synchronize",
+    "maintenance"
+  ],
+  "author": "thescottyjam <theScottyJam@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^3.6.1"
+  },
+  "bin": {
+    "coderef": "./cli.js"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "dependencies": {
+    "clipboardy": "^2.3.0"
+  }
+}
