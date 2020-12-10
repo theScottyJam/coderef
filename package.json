@@ -1,6 +1,6 @@
 {
   "name": "coderef",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Link distant parts of your codebase together. Keep your source code in sync.",
   "scripts": {
     "test": "jasmine"

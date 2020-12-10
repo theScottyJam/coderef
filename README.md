@@ -10,9 +10,9 @@ It's a simple, yet powerful concept. Just run `npx coderef` to copy a unique tag
 
 someScript.js
 ```js
-let el = document.querySelector('#someElement')
-let color = '#00f' // §xRDEM - This is the same color as the page's font color
-el.style.backgroundColor = '#00f'
+const el = document.querySelector('#someElement')
+const color = '#00f' // §xRDEM - This is the same color as the page's font color
+el.style.backgroundColor = color
 ```
 pageStyle.css
 ```css
@@ -34,8 +34,6 @@ Now that you've seen this concept, you won't be able to unsee it. We're creating
 
 <br/>
 <br/>
-
----
 
 ## API
 
