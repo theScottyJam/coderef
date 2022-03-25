@@ -1,4 +1,4 @@
-let {generate} = require('../main')
+import { generate } from '../main.js'
 
 describe('generate()', () => {
   it('generates unique code-refs', () => {

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-let clipboardy = require('clipboardy');
-let codeRef = require('./main')
+import clipboardy from 'clipboardy'
+import * as codeRef from './main.js'
 
 const BRIGHT = "\x1b[1m"
 const YELLOW = "\x1b[93m"
