@@ -11,24 +11,20 @@ It's a simple, yet powerful concept. Just run `npx coderef` to copy a unique tag
 someScript.js
 ```js
 const el = document.querySelector('#someElement')
-const color = '#00f' // §xRDEM - This is the same color as the page's font color
+const color = '#00f' // Search this project for §xRDEM to find other locations that use this color.
 el.style.backgroundColor = color
 ```
 pageStyle.css
 ```css
 body {
-    /* §xRDEM - This is the same color as #someElement's background */
+    /* Search this project for §xRDEM to find other locations that use this color. */
     color: #00f;
 }
 ```
 
-Assuming your team is all on the same page, anyone team member updating these colors will know to search the project (with grep, their code editor, etc) for the tag `§xRDEM` to find all other places that may need updating.
+Anyone reading this code can know that if they use their favorite project-searching tool (via their editor, grep, etc), they can easily find all related pieces of code.
 
 <br/>
-
-## Implications
-
-Now that you've seen this concept, you won't be able to unsee it. We're creating abstractions left and right to make code more DRY, and a good handful of them can simply be replaced with a couple of code tags.
 
 **Happy Coding!**
 
