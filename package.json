@@ -4,7 +4,9 @@
   "description": "Link distant parts of your codebase together. Keep your source code in sync.",
   "type": "module",
   "scripts": {
-    "test": "jasmine"
+    "test": "eslint . && jasmine",
+    "lint": "eslint .",
+    "test-only": "jasmine"
   },
   "keywords": [
     "crossref",
@@ -17,6 +19,7 @@
   "author": "thescottyjam <theScottyJam@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "^8.11.0",
     "jasmine": "^4.0.2"
   },
   "bin": {
