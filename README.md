@@ -41,4 +41,4 @@ This project is under the [MIT](https://opensource.org/licenses/MIT) license.
 
 ## Bug Reports/Feature Requests
 
-This project's github repository can be found [here](https://github.com/theScottyJam/coderef). Bug reports and feature requests are welcome, and can be submitted on github.
+[This project's github repository can be found here](https://github.com/theScottyJam/coderef). Bug reports and feature requests are welcome, and can be submitted on github.
