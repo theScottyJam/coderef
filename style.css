@@ -1,0 +1,165 @@
+body {
+  /*
+  §6cyGY
+  In a browser, this color won't be seen, as a child div will fill the whole space
+  and contain a different color.
+  But in Chrome in Android, this color will be seen under the back/home/menu buttons.
+  So the color chosen here is the same as the color of the ground, to make them blend together nicely.
+  */
+  background: oklch(0.65 0.15 30);
+  margin: 0;
+  width: 100%;
+  height: 100svh;
+}
+body.show-info-panel {
+  background: oklch(0.65 0 30); /* §mgHAH */
+}
+
+.bg-container {
+  background: oklch(0.65 0.15 265);
+  height: 100%;
+  overflow-y: hidden;
+  /* Necessary to make the overflow-y rule work */
+  position: relative;
+}
+body.show-info-panel .bg-container {
+  background: oklch(0.6 0 265);
+}
+
+body {
+  transition: background-color 0.1s;
+}
+
+.bg-container * {
+  transition: background-color 0.1s, opacity 0.1s;
+}
+
+.code-ref-viewer-container {
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(40% - 2.1em);
+  width: 150px;
+  /*
+  (Also, I know have an invisible toast in this container that I don't want to be cut off by this height
+  If I do choose to move the toast outside the container, make sure it doesn't stay visible when the info panel is visible)
+  */
+  height: 2em; /* // TODO: Seems to be getting ignored. */
+  transition: opacity 0.1s;
+
+  font-family: "Wendy One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (width < 400px) {
+  .code-ref-viewer-container {
+    left: 40px;
+  }
+}
+
+body.show-info-panel .code-ref-viewer-container {
+  opacity: 0;
+  pointer-events: none;
+  /* // TODO: Prevent any kind of interaction, including keyboard interaction */
+}
+
+#code-ref-viewer {
+  font-size: 2rem;
+  margin: 0;
+  color: white;
+
+  *::-moz-selection { /* Code for Firefox */
+    background: oklch(0.65 0.15 20);
+  }
+  
+  *::selection {
+    background: oklch(0.65 0.15 20);
+  }
+}
+
+.code-ref-prefix {
+  /* Swap the font for the "§" character, because the regular font's rendering of this character is really weird. */
+  font-family: "Yusei Magic", sans-serif;
+  font-weight: bold;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8em;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+.actions button {
+  all: unset;
+  color: white;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.actions button:focus {
+  border-color: white;
+}
+
+#copy-failed-toast {
+  /* // TODO: Prevent any kind of interaction, including keyboard interaction */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  
+  background: white;
+  padding: 5px;
+  font-family: "Yusei Magic", sans-serif;
+  border-radius: 2px;
+  border-top-right-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#copy-failed-toast.show {
+  opacity: 1;
+  pointer-events: initial;
+  transition: opacity 0s;
+}
+
+#info-button {
+  all: unset;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding-right: 4px;
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.info-panel {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 700px;
+
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Yusei Magic", sans-serif;
+  letter-spacing: 0.07rem;
+
+  h1 {
+    font-family: "Wendy One", sans-serif;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+
+body.show-info-panel .info-panel {
+  display: initial;
+}
