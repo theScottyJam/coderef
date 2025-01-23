@@ -9,7 +9,7 @@ parserOptions:
   ecmaVersion: 2022
   sourceType: module
 rules:
-  semi: ["error", "never", { "beforeStatementContinuationChars": "always" }]
+  semi: ["error", "always"]
   indent: ["error", 2, { "MemberExpression": 1, "flatTernaryExpressions": true, "offsetTernaryExpressions": true, "SwitchCase": 1 }]
   quotes: ["error", "single", { "avoidEscape": true }]
   prefer-const: ["error"]
