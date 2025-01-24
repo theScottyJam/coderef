@@ -90,7 +90,7 @@ function generateCodeRefWithoutPrefix() {
       throw new Error('The copy functionality is unavailable.');
     }
 
-    navigator.clipboard?.writeText(codeRefViewerEl.textContent) ?? copyUnavailableRejection()
+    (navigator.clipboard?.writeText(codeRefViewerEl.textContent) ?? copyUnavailableRejection())
       .catch(error => {
         copyCompleteEffect.run([
           { delay: '0.01s', key: 'color', value: 'oklch(0.65 0.15 375)' },
