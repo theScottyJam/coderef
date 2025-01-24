@@ -83,7 +83,14 @@ function generateCodeRefWithoutPrefix() {
   let failedToastTimeout = undefined;
   const copyCompleteEffect = new Transitioner(codeRefViewerEl);
   copyToClipboardEl.addEventListener('click', () => {
-    navigator.clipboard.writeText(codeRefViewerEl.textContent)
+    const copyUnavailableRejection = async () => {
+      // The navigator.clipboard property isn't always available, such as
+      // if you try to access the locally running webpage through a 192.168.*.* address.
+      // With normal usage, this won't be a problem.
+      throw new Error('The copy functionality is unavailable.');
+    }
+
+    navigator.clipboard?.writeText(codeRefViewerEl.textContent) ?? copyUnavailableRejection()
       .catch(error => {
         copyCompleteEffect.run([
           { delay: '0.01s', key: 'color', value: 'oklch(0.65 0.15 375)' },

@@ -114,7 +114,8 @@ body.show-info-panel .code-ref-viewer-container {
   font-family: "Yusei Magic", sans-serif;
   border-radius: 2px;
   border-top-right-radius: 8px;
-  width: 100%;
+  box-sizing: border-box;
+  width: calc(100vw - 100px);
   max-width: 400px;
 }
 
