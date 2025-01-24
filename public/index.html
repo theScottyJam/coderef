@@ -16,9 +16,8 @@
 <body>
   <div class="bg-container"></div>
   <div class="code-ref-viewer-container">
-    <p id="code-ref-viewer" tabindex="0">
-      <span class="code-ref-prefix">§</span><span id="code-ref-viewer-without-prefix"></span>
-    </p>
+    <!-- There can't be any new lines in the following, or those will be captured when the copy button is pushed. -->
+    <p id="code-ref-viewer" tabindex="0"><span class="code-ref-prefix">§</span><span id="code-ref-viewer-without-prefix"></span></p>
     <div class="actions">
       <button id="copy-to-clipboard">Copy</button>
       <button id="generate-new-coderef">Refresh</button>
