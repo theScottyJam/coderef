@@ -139,17 +139,19 @@ body.show-info-panel .code-ref-viewer-container {
 
 .info-panel {
   display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  max-width: 700px;
-
-  padding: 0 20px;
-  box-sizing: border-box;
   color: white;
   font-family: "Yusei Magic", sans-serif;
   letter-spacing: 0.07rem;
+
+  .info-panel-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
 
   h1 {
     font-family: "Wendy One", sans-serif;
@@ -158,6 +160,13 @@ body.show-info-panel .code-ref-viewer-container {
   p {
     font-size: 1.1rem;
     line-height: 1.3rem;
+  }
+
+  .info-panel-footer {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: inherit;
   }
 }
 
