@@ -1,8 +1,6 @@
 # Code-Ref
 
-Keep distant parts of your code base in sync by using searchable cross-references.
-
-It's a simple, yet powerful concept. Just run `npx coderef` to copy a unique tag to your clipboard (like `§SDyBm`), then use it to link different parts of your codebase together.
+Link distant parts of your codebase together with randomly generated coderefs, either from [the coderef webpage](https://thescottyjam.github.io/coderef/) hosted from the "webpage" branch, or using the `npx coderef` command, found on this branch.
 
 <br/>
 
@@ -10,9 +8,9 @@ It's a simple, yet powerful concept. Just run `npx coderef` to copy a unique tag
 
 someScript.js
 ```js
-const el = document.querySelector('#someElement')
-const color = '#00f' // Search this project for §xRDEM to find other locations that use this color.
-el.style.backgroundColor = color
+const el = document.querySelector('#someElement');
+const color = '#00f'; // Search this project for §xRDEM to find other locations that use this color.
+el.style.backgroundColor = color;
 ```
 pageStyle.css
 ```css
@@ -38,7 +36,3 @@ If for some reason you choose to install and import this package, you will find 
 ## License
 
 This project is under the [MIT](https://opensource.org/licenses/MIT) license.
-
-## Bug Reports/Feature Requests
-
-[This project's github repository can be found here](https://github.com/theScottyJam/coderef). Bug reports and feature requests are welcome, and can be submitted on github.
