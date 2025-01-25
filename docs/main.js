@@ -70,7 +70,7 @@ function generateCodeRefWithoutPrefix() {
 
   codeRefViewerEl.addEventListener('mouseup', event => {
     // If the user wasn't trying to make a selection, select everything.
-    if (codeRefViewerEl.selectionStart === codeRefViewerEl.selectionEnd) { // TODO: selectionStart/end probably don't work
+    if (globalThis.getSelection().toString().length === 0) {
       selectCodeRef();
     }
   });
