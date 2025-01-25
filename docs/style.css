@@ -37,14 +37,15 @@ body {
 .code-ref-viewer-container {
   position: absolute;
   left: calc(50% - 150px);
-  top: calc(40% - 2.1em);
+  top: calc(40%);
   width: 150px;
-  /*
-  (Also, I know have an invisible toast in this container that I don't want to be cut off by this height
-  If I do choose to move the toast outside the container, make sure it doesn't stay visible when the info panel is visible)
-  */
-  height: 2em; /* // TODO: Seems to be getting ignored. */
+  /* The content is bigger than the height, and will spill out, but be centered at the container's location. */
+  height: 0;
   transition: opacity 0.1s;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 
   font-family: "Wendy One", sans-serif;
   font-weight: 400;
@@ -109,6 +110,9 @@ body.show-info-panel .code-ref-viewer-container {
   pointer-events: none;
   transition: opacity 0.5s;
   
+  position: absolute;
+  left: calc(50% - 150px);
+  top: calc(40% + 40px);
   background: white;
   padding: 5px;
   font-family: "Yusei Magic", sans-serif;
@@ -119,10 +123,20 @@ body.show-info-panel .code-ref-viewer-container {
   max-width: 400px;
 }
 
+@media screen and (width < 400px) {
+  #copy-failed-toast {
+    left: 40px;
+  }
+}
+
 #copy-failed-toast.show {
   opacity: 1;
   pointer-events: initial;
   transition: opacity 0s;
+}
+
+body.show-info-panel #copy-failed-toast {
+  opacity: 0;
 }
 
 #info-button {
