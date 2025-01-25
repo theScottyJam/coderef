@@ -41,7 +41,8 @@ body {
   width: 150px;
   /* The content is bigger than the height, and will spill out, but be centered at the container's location. */
   height: 0;
-  transition: opacity 0.1s;
+  opacity: 1;
+  transition: opacity 0.1s, display 0.1s allow-discrete;
 
   display: flex;
   flex-flow: column;
@@ -60,8 +61,7 @@ body {
 
 body.show-info-panel .code-ref-viewer-container {
   opacity: 0;
-  pointer-events: none;
-  /* // TODO: Prevent any kind of interaction, including keyboard interaction */
+  display: none;
 }
 
 #code-ref-viewer {
@@ -105,10 +105,9 @@ body.show-info-panel .code-ref-viewer-container {
 }
 
 #copy-failed-toast {
-  /* // TODO: Prevent any kind of interaction, including keyboard interaction */
+  display: none;
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, display 0.5s allow-discrete;
   
   position: absolute;
   left: calc(50% - 150px);
@@ -130,8 +129,8 @@ body.show-info-panel .code-ref-viewer-container {
 }
 
 #copy-failed-toast.show {
+  display: initial;
   opacity: 1;
-  pointer-events: initial;
   transition: opacity 0s;
 }
 
